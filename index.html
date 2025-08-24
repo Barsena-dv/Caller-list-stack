@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card & New Call Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main UI -->
+    <div class="container">
+        <div class="controls-left">
+            <button id="add-note" class="add">+</button>
+            <button id="up">↑</button>
+            <button id="down">↓</button>
+        </div>
+
+        <div class="stack">
+            
+        </div>
+
+        <div class="colors-right">
+            <span class="color black"></span>
+            <span class="color purple"></span>
+            <span class="color orange"></span>
+            <span class="color teal"></span>
+        </div>
+    </div>
+
+    <!-- Hidden Form -->
+    <div class="form-container" id="newCallForm">
+        <h2>New Call</h2>
+        <form>
+
+            <label for="imageUrl">Image URL</label>
+            <input required type="text" id="imageUrl" placeholder="https://example.com/photo.jpg">
+
+            <label for="fullName">Full Name</label>
+            <input required type="text" id="fullName" placeholder="Enter full name">
+
+            <label for="homeTown">Home Town</label>
+            <input required type="text" id="homeTown" placeholder="Enter home town">
+
+            <label for="purpose">Purpose</label>
+            <input required type="text" id="purpose" placeholder="e.g., Quick appointment note">
+
+            <label>Category</label>
+            <div class="category-options">
+                <label class="category emergency">
+                    <input required type="radio" name="category" id="emergency" value="Emergency"> Emergency
+                </label>
+                <label class="category important">
+                    <input required type="radio" name="category" id="important" value="Important"> Important
+                </label>
+                <label class="category urgent">
+                    <input required type="radio" name="category" id="urgent" value="Urgent"> Urgent
+                </label>
+                <label class="category norush">
+                    <input required type="radio" name="category" id="norush" value="No Rush"> No Rush
+                </label>
+            </div>
+
+
+            <button class="create">Create Note</button>
+            <button id="closeForm" class="close">Close</button>
+        </form>
+    </div>
+
+    <!-- JS Placeholder -->
+    <script src="script.js"></script>
+</body>
+
+</html>
