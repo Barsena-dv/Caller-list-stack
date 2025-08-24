@@ -149,7 +149,7 @@ function showCards() {
         p1.innerHTML = `<span>Home Town:</span>   ${task.hmwTown}`;
 
         let p2 = document.createElement("p");
-        p2.innerHTML = `<span>Bookings:</span> ${task.prps}`;
+        p2.innerHTML = `<span>Purpose:</span> ${task.prps}`;
 
         // Append paragraphs to info
         info.appendChild(p1);
