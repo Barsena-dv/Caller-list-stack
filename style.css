@@ -11,14 +11,45 @@ body {
 /* -------- Container -------- */
 .container {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;      /* whole container becomes vertical */
+        align-items: center;         /* keep stack centered */
+        justify-content: center;
+    }
+
+    .controls-left {
+        flex-direction: row;         /* buttons side by side */
+        justify-content: center;
+        margin-bottom: 15px;         /* spacing from stack */
+    }
+
+    .colors-right {
+        flex-direction: row;         /* colors in a row */
+        justify-content: center;
+        margin-top: 15px;            /* spacing below stack */
+    }
+}
+
+@media (min-width: 600px){
+    .controls-left{
+        /* display: flex; */
+    flex-direction: column;
+    }
+
+    .colors-right{
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
 /* -------- Left Controls -------- */
 .controls-left {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
@@ -126,7 +157,6 @@ body {
 /* -------- Right Colors -------- */
 .colors-right {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
@@ -167,6 +197,32 @@ body {
     width: 450px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     z-index: 100;
+}
+
+@media (max-width: 600px){
+    .form-container {
+        width: 86%;       /* take almost full width */
+        max-height: 90vh; /* prevent going off-screen */
+        overflow-y: auto; /* enable scrolling if content is too tall */
+        padding: 15px;    /* reduce padding for mobile */
+    }
+
+    .category-options {
+        flex-direction: row;   /* make categories in a row */
+        flex-wrap: wrap;       /* allow wrapping if needed */
+        gap: 8px;
+    }
+
+    .category {
+        width: auto;           /* don’t fix width, adapt to content */
+        flex: 1 1 45%;         /* two per row */
+        justify-content: flex-start;
+    }
+
+    .form-container button {
+        font-size: 14px;  /* slightly smaller buttons */
+        padding: 10px;
+    }
 }
 
 .form-container h2 {
